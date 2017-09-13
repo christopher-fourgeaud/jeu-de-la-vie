@@ -1,40 +1,17 @@
+// Click function sur le bouton valider.
 $("#valider").click(function(){
+    //Définition des variables
     var line = $("#line").val() ;
     var col = $("#col").val() ;
     var coorLigne = [];
-    for(var i = 0; i < line; i++) {    
-    }
-
-$(".entree").html(" ");
-// $(".test2").html(" ");
-//     for(var i = 0; i < line; i++){
-//         $(".entree").append("<tr class='test2' id='ligne"+i+"'></tr>");
-        
-//     }
-    
-
-//     for(var i = 0; i < col; i++){
-//         $(".test2").append("<td class='test' id='case"+i+" ligne"+i+"'></td>")
-//     }
-    
+//On vide le tableau a chaque click sur l'input.
+$(".entree").html("");    
+//On boucle des tr.
 for(var i = 0; i < line; i++){
-    $("#ici").append("<tr id="+i+"'>") 
-
-
+    $("#ici").append("<tr id="+i+"></tr>") 
+        //On boucle nos td dans nos tr grace a leur id.
         for(var j = 0; j < col; j++) {
-            $("#ici").append("<td class='test' id='"+(i)+(j)+"'></td>"+"</tr>")
+            $("#"+i+"").append("<td class='test' id='"+i+j+"'></td>")
         }
 };
-
-
-
-
-
 })
-
-
-    
-
-    
-
-
